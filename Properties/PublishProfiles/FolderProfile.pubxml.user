@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\ahmad\Documents</_PublishTargetUrl>
+    <History>True|2025-01-17T08:19:56.5009006Z||;False|2024-12-24T01:34:59.3539340+01:00||;True|2024-12-24T01:33:08.0767787+01:00||;True|2024-12-23T17:18:48.9480573+01:00||;True|2024-12-23T17:13:08.3131567+01:00||;True|2024-12-23T16:41:43.6397800+01:00||;True|2024-12-23T16:32:42.6125622+01:00||;</History>
+    <LastFailureDetails />
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=%28localdb%29\MSSQLLocalDB%3bDatabase=RestaurantDb%3bTrusted_Connection=True%3bMultipleActiveResultSets=true</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

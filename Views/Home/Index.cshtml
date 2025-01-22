@@ -1,0 +1,141 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="jumbotron text-center bg-light py-5">
+    <h1 class="display-4 fw-bold text-primary animate__animated animate__fadeInDown">Welcome to Restaurant Reservation</h1>
+    <p class="lead animate__animated animate__fadeInUp">Easily manage and book reservations for your restaurant with a user-friendly interface.</p>
+    <a href="@Url.Action("Index", "Reservation")" class="btn btn-primary btn-lg px-5 shadow animate__animated animate__bounceIn">View Reservations</a>
+</div>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4 fw-bold">Our Features</h2>
+    <div class="row text-center g-4">
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 p-4 bg-light">
+                <h3 class="text-primary"><i class="fas fa-calendar-alt"></i> Manage Reservations</h3>
+                <p>Easily track and manage all customer reservations in one place with ease.</p>
+                <button class="btn btn-outline-primary" onclick="showFeatureDetails('Manage Reservations', 'Track all reservations efficiently.')">Learn More</button>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 p-4 bg-light">
+                <h3 class="text-success"><i class="fas fa-mobile-alt"></i> Responsive Design</h3>
+                <p>Access the platform seamlessly from any device with our mobile-friendly layout.</p>
+                <button class="btn btn-outline-success" onclick="showFeatureDetails('Responsive Design', 'Enjoy seamless access on any device.')">Learn More</button>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 p-4 bg-light">
+                <h3 class="text-warning"><i class="fas fa-lock"></i> Secure Data</h3>
+                <p>Protect all customer data with industry-leading security standards.</p>
+                <button class="btn btn-outline-warning" onclick="showFeatureDetails('Secure Data', 'Your data is safe with us.')">Learn More</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="featureModal" class="modal fade" tabindex="-1" aria-labelledby="featureModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="featureModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="featureModalBody"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr class="my-5">
+
+<div class="container text-center">
+    <h2 class="fw-bold mb-4">What Our Customers Say</h2>
+    <div class="row mt-4 g-4">
+        <div class="col-md-4">
+            <blockquote class="blockquote bg-light p-4 rounded shadow-sm">
+                <p>"This app made managing reservations a breeze. Highly recommend!"</p>
+                <footer class="blockquote-footer mt-2">John Doe</footer>
+            </blockquote>
+        </div>
+        <div class="col-md-4">
+            <blockquote class="blockquote bg-light p-4 rounded shadow-sm">
+                <p>"Our restaurant's efficiency has improved significantly thanks to this app."</p>
+                <footer class="blockquote-footer mt-2">Jane Smith</footer>
+            </blockquote>
+        </div>
+        <div class="col-md-4">
+            <blockquote class="blockquote bg-light p-4 rounded shadow-sm">
+                <p>"Great support and easy to use. Love it!"</p>
+                <footer class="blockquote-footer mt-2">Alex Johnson</footer>
+            </blockquote>
+        </div>
+    </div>
+</div>
+
+<hr class="my-5">
+
+<div class="container">
+    <h2 class="text-center fw-bold mb-4">Get in Touch</h2>
+    <p class="text-center text-muted mb-4">We’d love to hear from you! Send us a message below:</p>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form>
+                <div class="form-group mb-3">
+                    <label for="name" class="fw-bold">Name</label>
+                    <input type="text" class="form-control shadow-sm" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="email" class="fw-bold">Email</label>
+                    <input type="email" class="form-control shadow-sm" id="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="message" class="fw-bold">Message</label>
+                    <textarea class="form-control shadow-sm" id="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary px-4 shadow-sm">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer class="footer bg-dark text-white py-4 mt-5">
+    <div class="container text-center">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <h5 class="fw-bold">About Us</h5>
+                <p>Restaurant Reservation is your go-to solution for efficient and secure reservation management.</p>
+            </div>
+            <div class="col-md-4">
+                <h5 class="fw-bold">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="@Url.Action("Index", "Home")" class="text-white text-decoration-none">Home</a></li>
+                    <li><a href="@Url.Action("Index", "Reservation")" class="text-white text-decoration-none">Reservations</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5 class="fw-bold">Contact Us</h5>
+                <p>Email: <a href="mailto:support@restaurantreservation.com" class="text-white">support@restaurantreservation.com</a></p>
+                <p>Phone: +1 234 567 890</p>
+            </div>
+        </div>
+        <hr class="my-4 border-secondary">
+        <p class="mb-0">&copy; @DateTime.Now.Year Restaurant Reservation. All Rights Reserved.</p>
+    </div>
+</footer>
+
+@section Scripts {
+    <script>
+        function showFeatureDetails(title, description) {
+            document.getElementById('featureModalLabel').innerText = title;
+            document.getElementById('featureModalBody').innerText = description;
+            const modal = new bootstrap.Modal(document.getElementById('featureModal'));
+            modal.show();
+        }
+    </script>
+}
